@@ -2,14 +2,15 @@ import React from 'react';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 
 function Header() {
+    
     return (
         <div className='flex justify-center w-full min-h-screen items-center px-4 lg:px-0'>
-            <div className='w-full max-w-screen-lg lg:w-3/4 xl:w-1/2'>
+            <div className='w-full grid-cols-1 max-w-screen-lg lg:w-3/4 xl:w-3/4 items-center'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
-                    <div className='w-60 h-60 lg:h-80 xl:h-96 xl:w-96 rounded-full overflow-hidden' style={{backgroundImage: `url(${require('../img/mine.jpeg')})`,backgroundSize:"cover" }}>
+                    <div data-aos='fade-right' className='w-60 h-60 lg:h-80 xl:h-96 xl:w-96 rounded-full overflow-hidden' style={{backgroundImage: `url(${require('../img/mine.jpeg')})`,backgroundSize:"cover" }}>
                         <img src={require("../img/mine.jpeg")} className='w-full hidden   h-full object-cover' alt="" />
                     </div>
-                    <div className='mt-8 lg:mt-0'>
+                    <div className='mt-8 lg:mt-0' data-aos='fade-left'>
                         <h1 className='text-4xl lg:text-5xl font-bold'>
                             ALAPHIA Francis,
                         </h1>

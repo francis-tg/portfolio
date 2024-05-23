@@ -8,9 +8,11 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <div className="poppins-light">
+      <section id="">
       <header>
         <Navbar/>
       </header>
+      </section>
       <section id="about">
         <Header />
       </section>
@@ -20,9 +22,11 @@ function App() {
       <section id="projects">
         <Projets/>
       </section>
-      <footer>
+      <section id="footer">
+        <footer>
         <Footer/>
       </footer>
+      </section>
     </div>
   );
 }
