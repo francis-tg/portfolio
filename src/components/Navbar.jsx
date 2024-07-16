@@ -31,7 +31,7 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("click", handleClickOutside);
 
-    return () => {
+    return () => { 
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("click", handleClickOutside);
     };

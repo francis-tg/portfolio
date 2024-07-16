@@ -4,9 +4,21 @@ import { LuLock } from 'react-icons/lu'
 
 const Projects = [
     {
+        name: "Portfolio du cabinet ACTe Kara (en cours de développement)",
+        url: "https://cabinet-acte.vercel.app/",
+        gihub: "https://github.com/francis-tg/acte_porto.git",
+        private:true
+    },
+    {
         name: "Application de gestion de boutique",
         url: "https://store-manager-izcr.onrender.com/",
         gihub: "https://github.com/francis-tg/gestion_app.git",
+        private:true
+    },
+    {
+        name: "Participation à la réalisation du Système d'inscription (Caméroun)",
+        url: "https://inscription-univ-ebolowa.vercel.app/",
+        gihub: "",
         private:true
     },
     {
