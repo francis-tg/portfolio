@@ -1,8 +1,9 @@
 import React from 'react';
-import { IoLogoReact, IoLogoVue, IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoSass } from "react-icons/io5";
+import { IoLogoReact, IoLogoVue,IoLogoJavascript, } from "react-icons/io5";
 import { BiLogoTailwindCss, BiLogoNodejs, BiLogoPhp, BiLogoPython, BiLogoGithub, BiLogoMongodb } from "react-icons/bi";
 import { FaRaspberryPi, FaUbuntu, FaDebian } from "react-icons/fa6";
 import { DiMysql } from 'react-icons/di';
+import { SiArduino, SiFlutter, SiLaravel, SiSvelte } from 'react-icons/si';
 
 function Skills() {
   return (
@@ -20,10 +21,10 @@ function Skills() {
               <SkillItem icon={<IoLogoReact size={95} />} text="React Js" />
               <SkillItem icon={<BiLogoTailwindCss size={95} />} text="Tailwindcss" />
               <SkillItem icon={<IoLogoVue size={95} />} text="Vuejs" />
-              <SkillItem icon={<IoLogoHtml5 size={95} />} text="HTML5" />
-              <SkillItem icon={<IoLogoCss3 size={95} />} text="CSS3" />
+              <SkillItem icon={<SiFlutter size={95} />} text="Flutter" />
+              <SkillItem icon={<SiSvelte size={95} />} text="Svelte" />
               <SkillItem icon={<IoLogoJavascript size={95} />} text="Javascript" />
-              <SkillItem icon={<IoLogoSass size={95} />} text="SASS" />
+             {/*  <SkillItem icon={<IoLogoSass size={95} />} text="SASS" /> */}
             </div>
           </div>
           <div className='w-full'>
@@ -34,6 +35,7 @@ function Skills() {
               <SkillItem icon={<BiLogoNodejs size={95} />} text="NodeJs" />
               <SkillItem icon={<BiLogoPhp size={95} />} text="PHP" />
               <SkillItem icon={<BiLogoPython size={95} />} text="Python" />
+              <SkillItem icon={<SiLaravel size={95} />} text="Laravel" />
               <SkillItem icon={<BiLogoGithub size={95} />} text="Github" />
             </div>
           </div>
@@ -49,10 +51,18 @@ function Skills() {
           </div>
           <div className='w-full'>
             <h1 className='text-xl font-semibold mb-5'>
-              Systèmes et domotiques
+              IoT
             </h1>
             <div className='grid grid-cols-2 xl:grid-cols-3 gap-5' data-aos="fade-left">
               <SkillItem icon={<FaRaspberryPi size={95} />} text="RaspberryPi et Orange pi" />
+              <SkillItem icon={<SiArduino size={95} />} text="Electronique en général" />
+            </div>
+          </div>
+          <div className='w-full'>
+            <h1 className='text-xl font-semibold mb-5'>
+              Systèmes
+            </h1>
+            <div className='grid grid-cols-2 xl:grid-cols-3 gap-5' data-aos="fade-left">
               <SkillItem icon={<FaUbuntu size={95} />} text="Ubuntu" />
               <SkillItem icon={<FaDebian size={95} />} text="Debian" />
             </div>

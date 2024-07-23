@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+import { fetchProfile } from '../api/github';
+import Stats from './Stats';
 
 function Header() {
+    const [githubData,setGithubData] = useState({})
+    async function pullGithubData(){
+        const response = await fetchProfile();
+        if (response.status===200) {
+            const data = await response.json();
+            setGithubData(data)
+        }
+    }
+    useEffect(() => {
+      pullGithubData()
+    }, [githubData])
     
     return (
-        <div className='flex justify-center w-full min-h-screen items-center px-4 lg:px-0'>
+        <div className='flex justify-center w-full min-h-screen items-center flex-col px-4 gap-8 lg:px-0'>
             <div className='w-full grid-cols-1 max-w-screen-lg lg:w-3/4 xl:w-3/4 items-center'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
-                    <div data-aos='fade-right' className='w-60 h-60 lg:h-80 xl:h-96 xl:w-96 rounded-full overflow-hidden' style={{backgroundImage: `url(${require('../img/mine.jpeg')})`,backgroundSize:"cover" }}>
-                        <img src={require("../img/mine.jpeg")} className='w-full hidden   h-full object-cover' alt="" />
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+                    <div data-aos='fade-right' className='w-60 h-60 lg:h-80 xl:h-96 xl:w-96 rounded-full overflow-hidden' style={{backgroundImage: `url(${githubData?.avatar_url})`,backgroundSize:"cover" }}>
+                        <img src={githubData?.avatar_url} className='w-full hidden h-full object-cover' alt="" />
                     </div>
                     <div className='mt-8 lg:mt-0' data-aos='fade-left'>
                         <h1 className='text-4xl lg:text-5xl font-bold'>
@@ -31,6 +44,7 @@ function Header() {
                     </div>
                 </div>
             </div>
+            <Stats githubData={githubData}/>
         </div>
     );
 }

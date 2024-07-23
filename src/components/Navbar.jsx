@@ -38,7 +38,7 @@ function Navbar() {
   }, [handleClickOutside]);
 
   return (
-    <nav className='flex justify-between items-center p-3 z-50'>
+    <nav className='flex justify-between items-center p-5 z-50'>
       <div>
         <h1 className='text-2xl font-bold'>
           ALAPHIA Francis
