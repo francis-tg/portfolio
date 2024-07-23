@@ -21,10 +21,10 @@ function Navbar() {
   React.useEffect(() => {
 
     const handleScroll = () => {
-      if (window.pageYOffset > 200) {
-        document.querySelector("nav").classList.add("fixed", "w-full", "bg-white", "shadow-lg");
+      if (window.pageYOffset > 50) {
+        document.querySelector("nav").classList.add("fixed", "w-full", "bg-white/50",'backdrop-blur-sm', "shadow-lg");
       } else {
-        document.querySelector("nav").classList.remove("fixed", "w-full", "bg-white", "shadow-lg");
+        document.querySelector("nav").classList.remove("fixed", "w-full", "bg-white/50", "shadow-lg",'backdrop-blur-sm');
       }
     };
 
@@ -51,7 +51,7 @@ function Navbar() {
       </div>
       <div
         ref={menuRef}
-        className={`lg:flex ${isOpen ? 'block fixed w-full top-0 bg-white p-5 h-full' : 'hidden'} mt-4 lg:mt-0`}
+        className={`lg:flex ${isOpen ? 'block fixed w-full  top-0 z-50 bg-white p-5 h-full' : 'hidden'} mt-4 lg:mt-0`}
       >
         <ul className='flex flex-col lg:flex-row items-center gap-4'>
           <li>
