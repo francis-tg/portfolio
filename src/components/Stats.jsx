@@ -3,7 +3,7 @@ import React from 'react'
 function Stats({githubData}) {
     return (
         <div>
-            <div className="stats shadow">
+            <div className="stats max-sm:stats-vertical  shadow">
                 <div className="stat">
                     <div className="stat-figure text-primary">
                         <svg
