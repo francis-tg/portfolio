@@ -4,6 +4,12 @@ import { LuLock } from 'react-icons/lu'
 
 const Projects = [
     {
+        name: "ICM calculator (Laravel)",
+        url: "https://github.com/francis-tg/icm_calculation_app.git",
+        gihub: "https://github.com/francis-tg/icm_calculation_app.git",
+        private:false
+    },
+    {
         name: "Portfolio du cabinet ACTe Kara (en cours de développement)",
         url: "https://cabinet-acte.vercel.app/",
         gihub: "https://github.com/francis-tg/acte_porto.git",
